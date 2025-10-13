@@ -1,0 +1,10 @@
+Notes
+
+issues:
+- when refreshing after pressing the "navigate to projects" btn the page doesnt reload from the top
+- how to make the form answers in my email
+
+ideas:
+- add grain to the black backgorund
+- for the cards:
+    - leave just the image and the title, then on hover preview more info for the project- simpler first look and more interactivity

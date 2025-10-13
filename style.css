@@ -1,0 +1,543 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+head {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+:root {
+    --black_clr_backgrouond: #121212;
+    --gray-clr: #757575;
+    --white_clr_background: #fafafa;
+    --cta_clr: #2D64F1;
+    --cta_clr_light: #799aee;
+    /* --fw */
+
+}
+
+header, nav {
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+    
+}
+.dark_bg {
+    height: 230vh;
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+}
+
+.light_bg {
+    height: 200vh;
+    background-color: var(--white_clr_background);
+    color: var(--black_clr_backgrouond);
+}
+
+
+
+header {
+    height: 100vh;
+}
+
+/* nav bar setup */
+nav {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 5rem;
+    align-items: center;
+    color: var(--white_clr_background);
+    z-index: 1;
+}
+
+.logo {
+    padding-inline: 5rem;
+    font-size: 1.2rem;
+}
+
+.nav_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    list-style-type: none;
+    color: var(--white_clr_background);
+}
+.nav_btn a {
+    color: var(--white_clr_background);
+    text-decoration: none;
+}
+
+.nav_btn a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+/* header */
+
+.welcome {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 10rem;
+    padding-inline: 25rem;
+}
+
+.welcome_img_overflow {
+    overflow: hidden;
+    padding-top: 3rem;
+    padding-left: 6rem;
+}
+.welcome img {
+    height: 290px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    /* padding-left: 6rem; */
+    border: px solid white;
+    box-shadow: 0 0 3rem .2rem white;
+    
+}
+.greeting h1 {
+    
+    font-size: 5rem;
+    font-weight: 500;
+    padding-bottom: 5rem;
+}
+.greeting p {
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.greeting button {
+    margin-top: 5rem;
+    padding-block: 1.25em;
+    padding-inline: 1.75em;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--cta_clr);
+    font-size: 1.2rem;
+    border-radius: 2em;
+    color: var(--white_clr_background);
+}
+
+.greeting button:hover {
+    box-shadow: 0 0 .75rem .5rem var(--cta_clr);
+}
+
+.down {
+    display: grid;
+    place-content: center;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.down a {
+    color: var(--gray-clr);
+    text-decoration: none;
+}
+
+.down a:hover {
+    color: var(--white_clr_background);
+    text-decoration: underline;
+}
+
+
+/* projects */
+
+/* .main {
+    background-color: var(--white_clr_background);
+    color: var(--black_clr_backgrouond);
+    height: 100vh;
+} */
+
+/* cards */
+.project_cards {
+    display: grid;
+    justify-self: center;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 7.5rem; 
+}
+
+.card_link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.card {
+    max-width: 380px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem 1rem lightgray;
+}
+.card_img {
+    border-radius: 1rem 1rem 0 0;
+    display: block;
+    
+}
+
+.card_container {
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+    border-radius: 0 0 1rem 1rem;
+    padding: .75rem;
+    line-height: 1.5;
+    
+}
+.card_container h3 {
+    font-size: 1.4rem;
+    
+}
+
+.card_container p {
+    font-size: 1rem;
+}
+
+.title_projects {
+    padding-top: 10rem;
+    padding-left: 10rem;
+    font-size: 4rem;
+}
+
+.more_prj_btn {
+    display: flex;
+    justify-content: center;
+    margin: 7.5rem;
+}
+
+.more_prj_btn button{
+    padding-block: 1.25em;
+    padding-inline: 1.75em;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--cta_clr);
+    font-size: 1.2rem;
+    border-radius: 2em;
+    color: var(--white_clr_background);
+}
+
+.more_prj_btn button:hover {
+    box-shadow: 0 0 .75rem .5rem var(--cta_clr);
+}
+
+/* Skills */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-areas: 
+    "skill1 container1 container1"
+    "container2 container2 skill2";
+    gap: 2.5rem;
+    justify-self: center;
+    padding-block: 10rem;
+}
+
+.skills_p1 {
+    grid-area: skill1;
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
+}
+.skills_container1 {
+    grid-area: container1;
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+    padding: 5rem;
+    border-radius: 1rem;
+}
+.skills_p2 {
+    grid-area: skill2;
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
+    
+}
+.skills_container2 {
+    grid-area: container2;
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+    padding: 5rem;
+    border-radius: 1rem;
+}
+
+.testimonials {
+    height: 100vh;
+    color: var(--white_clr_background);
+    display: grid;
+    justify-self: center;
+    gap: 5rem;
+    grid-template-columns: repeat(3,300px);
+    border-radius: 1rem;
+   
+}
+
+.testimonials_title {
+    padding-top: 10rem;
+    padding-left: 10rem;
+    font-size: 4rem;
+
+}
+
+.testimonial_container1, .testimonial_container2, .testimonial_container3 {
+    background-color: #3f3f3f;
+     margin-top: 7.5rem;
+     margin-bottom: 15rem;
+     border-radius: 1rem;
+     padding: 2rem;
+}
+
+.contact {
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+    display: grid;
+    justify-items: center;
+    
+}
+
+.contact_txt {
+    padding-top: 10rem;
+    font-size: 4rem;
+}
+
+.contact_btn {
+    padding-block: 1.25em;
+    padding-inline: 1.75em;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--cta_clr);
+    font-size: 1.2rem;
+    border-radius: 2em;
+    color: var(--white_clr_background);
+    margin-top: 5rem;
+}
+
+.contact_btn:hover {
+    box-shadow: 0 0 .75rem .5rem var(--cta_clr);
+}
+
+.footer {
+    margin-top: 20rem;
+    display: grid;
+    align-items: end;
+}
+
+.footer_link {
+    margin-left: 5rem;
+    line-height: 2;
+    color: var(--white_clr_background);
+    font-size: 1.5rem;
+}
+
+.rights {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+
+
+
+
+/* ICP page styling */
+
+.project_header {
+    height: 20vh;
+    background-color: var(--black_clr_backgrouond);
+}
+
+.project_title {
+    font-size: 4rem;
+    color: var(--white_clr_background);
+    display: grid;
+    text-align: center;
+    padding-top: 5rem;
+
+}
+
+.project_description {
+    font-size: 1.5rem;
+    margin-inline: 15rem;
+    margin-block: 5rem;
+}
+
+.pdf_obj {
+    width: 60%;
+    aspect-ratio: 4 / 3;
+    display: grid;
+    justify-self: center;
+}
+
+.project_grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "content image";
+    gap: 2.5rem;
+    /* justify-self: center; */
+    padding-block: 10rem;
+}
+
+.project_info {
+    grid-area: content;
+    word-wrap: break-word;
+  word-break: break-all;
+  margin-left: 15rem;
+    /* margin-left: 10rem; */
+}
+
+.project_image {
+    grid-area: image;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .project_header {
+    height: 30vh;
+    background-color: var(--black_clr_backgrouond);
+}
+
+.project_title {
+    font-size: 3rem;
+    color: var(--white_clr_background);
+    display: grid;
+    text-align: center;
+    padding-top: 4rem;
+
+}
+
+.project_description {
+    font-size: 1.5rem;
+    margin-inline: 5rem;
+    margin-block: 5rem;
+}
+
+.pdf_obj {
+    width: 80%;
+    aspect-ratio: 4 / 3;
+    display: grid;
+    justify-self: center;
+}
+
+.project_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "content "
+    "image";
+    gap: 2.5rem;
+    /* justify-self: center; */
+    /* padding-block: 10rem; */
+}
+
+.project_info {
+    grid-area: content;
+    align-self:center;
+    word-wrap: break-word;
+  word-break: break-all;
+  margin-inline: 5rem;
+
+}
+
+.project_image {
+    grid-area: image;
+    /* margin-inline: 3rem; */
+    justify-self: center;
+}
+}
+
+
+
+
+/* About page */
+
+.about_header {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "picture text";
+    align-content: center;
+    /* align-items: center; */
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+    gap: 5rem;
+    
+}
+
+.about_profile_pic {
+    grid-area: picture;
+    margin-left: 20rem;
+}
+
+.about_header_text {
+    grid-area: text;
+    margin-right: 20rem;
+}
+
+.about_header_greeting {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.about_header_description {
+    margin-top: 7rem;
+    font-size: 1.5rem;
+}
+
+.about_main {
+    margin-top: 5rem;
+}
+
+.about_main_title {
+    font-size: 1.5rem;
+    margin-left: 20rem;
+    margin-bottom: 5rem;
+}
+
+.about_certificates {
+    display: grid;
+    margin-inline: 20rem;
+    margin-bottom: 10rem;
+    grid-template-areas: 
+    "award1 award2 award3 award4";
+}
+
+.award1 {
+    grid-area: award1;
+}
+
+.award2 {
+    grid-area: award2;
+}
+
+.award3 {
+    grid-area: award3;
+}
+
+.award4 {
+    grid-area: award4;
+}
+
+.about_footer {
+    height: 30vh;
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+}
