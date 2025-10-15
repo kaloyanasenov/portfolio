@@ -31,7 +31,7 @@ header, nav {
     
 }
 .dark_bg {
-    height: 230vh;
+    height: 250vh;
     background-color: var(--black_clr_backgrouond);
     color: var(--white_clr_background);
 }
@@ -168,6 +168,7 @@ nav {
     gap: 5rem;
     grid-template-columns: 1fr 1fr 1fr;
     padding-top: 7.5rem; 
+    
 }
 
 .card_link {
@@ -178,8 +179,28 @@ nav {
     width: 100%;
 }
 
+.info_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 115%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+    border-radius: 1rem;
+
+}
+
+.card:hover .info_overlay{
+    opacity: 1;
+}
 .card {
     max-width: 380px;
+    height: 280px;
     text-decoration: none;
     cursor: pointer;
     position: relative;
@@ -192,21 +213,42 @@ nav {
     
 }
 
+
 .card_container {
+    
     background-color: var(--black_clr_backgrouond);
     color: var(--white_clr_background);
     border-radius: 0 0 1rem 1rem;
     padding: .75rem;
-    line-height: 1.5;
+    /* line-height: 1.5; */
     
 }
 .card_container h3 {
+    
     font-size: 1.4rem;
     
 }
 
-.card_container p {
+.tag {
+    display: inline-block;
+    background-color: #3f3f3f;
+    padding: .5rem;
+    border-radius: .65rem;
+    margin: .5rem;
+    font-size: .75rem;
+    /* color: var(--black_clr_backgrouond); */
+}
+.info_overlay p {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
     font-size: 1rem;
+    text-decoration: none;
+    color: var(--white_clr_background);
 }
 
 .title_projects {
@@ -236,6 +278,8 @@ nav {
 .more_prj_btn button:hover {
     box-shadow: 0 0 .75rem .5rem var(--cta_clr);
 }
+
+
 
 /* Skills */
 
@@ -278,13 +322,17 @@ nav {
     border-radius: 1rem;
 }
 
+
+
+
+/* Testimonials */
 .testimonials {
-    height: 100vh;
+    height: 80vh;
     color: var(--white_clr_background);
     display: grid;
     justify-self: center;
     gap: 5rem;
-    grid-template-columns: repeat(3,300px);
+    grid-template-columns: repeat(3,350px);
     border-radius: 1rem;
    
 }
@@ -297,11 +345,21 @@ nav {
 }
 
 .testimonial_container1, .testimonial_container2, .testimonial_container3 {
+    box-shadow: 0 0 1rem 1rem #2b2b2b;
     background-color: #3f3f3f;
-     margin-top: 7.5rem;
-     margin-bottom: 15rem;
-     border-radius: 1rem;
-     padding: 2rem;
+    margin-top: 7.5rem;
+    margin-bottom: 15rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: grid;
+    /* min-height: 25rem; */
+    /* align-self: center; */
+    place-content: center;
+    line-height: 1.7;
+}
+
+.testimonial_name {
+    padding-top: 2.5rem;
 }
 
 .contact {
@@ -309,11 +367,11 @@ nav {
     color: var(--white_clr_background);
     display: grid;
     justify-items: center;
-    
+    margin-bottom: 25rem;
 }
 
 .contact_txt {
-    padding-top: 10rem;
+    padding-top: 20rem;
     font-size: 4rem;
 }
 
@@ -335,7 +393,8 @@ nav {
 }
 
 .footer {
-    margin-top: 20rem;
+    padding-top: 7rem;
+    margin-top: 10rem;
     display: grid;
     align-items: end;
 }
@@ -350,6 +409,8 @@ nav {
 .rights {
     margin-top: 5rem;
     text-align: center;
+    display: grid;
+    align-items: end;
 }
 
 
@@ -504,6 +565,7 @@ nav {
 
 .about_main {
     margin-top: 5rem;
+    background-color: var(--white_clr_background);
 }
 
 .about_main_title {
@@ -537,7 +599,30 @@ nav {
 }
 
 .about_footer {
+    height: 40vh;
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+}
+
+
+
+/* projects page  */
+.projects_header {
     height: 30vh;
     background-color: var(--black_clr_backgrouond);
     color: var(--white_clr_background);
+}
+
+.projects_header p {
+    padding-top: 10rem;
+    padding-left: 20rem;
+}
+.header_title_projects {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--white_clr_background);
+}
+
+.projects_cards_grid > .project_cards > .card {
+    margin-bottom: 10rem;
 }
