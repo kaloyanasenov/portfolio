@@ -27,7 +27,8 @@
 <!-- ------------------------------------------------------------------------------------------- -->
 
     <header>
-        <div class="welcome">
+        <div class="wrapper">
+            <div class="welcome">
             <!-- <img src="media\headshot.jpeg" alt="porfile picture" height="363px" width="290px"> -->
              <div class="welcome_img_overflow">
                 <img src="media\Avatar.JPG" alt="profile picture" height="290px" width="290px">
@@ -36,7 +37,7 @@
             <div class="greeting">
               <h1>Hello there!</h1>
               <p>I am a recent graduate in Creative Computing and design passionate about UI/UX design, Front-end and Content creation.</p>
-              <button>Download my CV</button>
+              <a href="media\Kaloyan Asenov CV(July25).pdf" downLoad><button>View my CV</button></a>
             </div>
         </div>
         <div class="down">
@@ -45,52 +46,56 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="none" stroke="#757575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 10l5 5m0 0l5-5"/></svg>
             </a>
         </div>
+        </div>
+        
     </header>
 <!-- ------------------------------------------------------------------------------------------- -->
     
     <main class="main" id="projects">
         <div class="light_bg">
-            <p class="title_projects">Recent projects</p>
-            <div class="project_cards">
-                
-                <div class="card">
-                    <div class="info_overlay">
-                        <a href="ICP.html" class="card_link"><p>UX research, conducted for my Honours project</p></a>
+            <div class="wrapper">
+                <p class="title_projects">Recent projects</p>
+                <div class="project_cards">
+                    
+                    <div class="card">
+                        <div class="info_overlay">
+                            <a href="ICP.html" class="card_link"><p>UX research, conducted for my Honours project</p></a>
+                        </div>
+                        <img class="card_img" src="media\ICP_portfolio2.jpeg" alt="Rainbow projected on a wall" height="230px" width="380px">
+                        <div class="card_container">
+                            <h3>Individual colour perception</h3>
+                            <p class="tag">UX research</p>
+                        </div>
                     </div>
-                    <img class="card_img" src="media\ICP_portfolio2.jpeg" alt="Rainbow projected on a wall" height="230px" width="380px">
-                    <div class="card_container">
-                        <h3>Individual colour perception</h3>
-                        <p class="tag">UX research</p>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="info_overlay">
-                        <a href="ICP.html" class="card_link"><p>UX research, conducted for my Honours project</p></a>
+                    <div class="card">
+                        <div class="info_overlay">
+                            <a href="volleyball.html" class="card_link"><p>UX research, conducted for my Honours project</p></a>
+                        </div>
+                        <img class="card_img" src="media\volleyball court.jpg" alt="Volleyball court, top view" height="230px" width="380px">
+                        <div class="card_container">
+                            <h3>Interactive volleyball manual</h3>
+                            <p class="tag">UX Interaction design</p>
+                        </div>
                     </div>
-                    <img class="card_img" src="media\volleyball court.jpg" alt="Volleyball court, top view" height="230px" width="380px">
-                    <div class="card_container">
-                        <h3>Interactive volleyball manual</h3>
-                        <p class="tag">UX Interaction design</p>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="info_overlay">
-                        <a href="ICP.html" class="card_link"><p>UX research, conducted for my Honours project</p></a>
+                    <div class="card">
+                        <div class="info_overlay">
+                            <a href="ICP.html" class="card_link"><p>UX research, conducted for my Honours project</p></a>
+                        </div>
+                        <img class="card_img" src="media\IMG_9088.jpg" alt="A man writing notes on a desk" height="230px" width="380px">
+                        <div class="card_container">
+                            <h3>Short movie: "The choice"</h3>
+                            <p class="tag">Content creation</p>
+                        </div>
                     </div>
-                    <img class="card_img" src="media\IMG_9088.jpg" alt="A man writing notes on a desk" height="230px" width="380px">
-                    <div class="card_container">
-                        <h3>Short movie: "The choice"</h3>
-                        <p class="tag">Content creation</p>
-                    </div>
+                    
                 </div>
-                
-            </div>
-            <div class="more_prj_btn">
-                <a href="projects.html">
-                    <button>More projects</button>
-                </a>
+                <div class="more_prj_btn">
+                    <a href="projects.html">
+                        <button>More projects</button>
+                    </a>
+                </div>
             </div>
         <!-- -------------------------------------------------------------- -->
             <div class="skills">
@@ -110,29 +115,31 @@
         </div>
         <!-- -------------------------------------------------------------- -->
         <div class="dark_bg">
-            <p class="testimonials_title">Some of the Feedback I have received</p>
-            <div class="testimonials">
-                <div class="testimonial_container1">
-                    <p class="testimonial_description">“I would definitely be using your work as an example to future students as I do believe there are valuable elements that can inspire future cohorts. ”</p>
-                    <p class="testimonial_name">RGU Lecturer</p>
-                    <p class="testimonial_ocupation">Data Visualisation</p>
+            <div class="wrapper">
+                <p class="testimonials_title">Some of the Feedback I have received</p>
+                <div class="testimonials">
+                    <div class="testimonial_container1">
+                        <p class="testimonial_description">“I would definitely be using your work as an example to future students as I do believe there are valuable elements that can inspire future cohorts. ”</p>
+                        <p class="testimonial_name">RGU Lecturer</p>
+                        <p class="testimonial_ocupation">Data Visualisation</p>
+                    </div>
+                    <div class="testimonial_container2">
+                        <p class="testimonial_description">“I am very impressed by the developmental work that went into this project and the way that the student took it upon themselves to perform many rounds of iterative improvement. Rather than stopping when the work was ostensibly done, Kaloyan went ahead…<strong>This demo was head and shoulders above any other I have seen at RGU…</strong> He has produced (and presented) work of the highest quality.”</p>
+                        <p class="testimonial_name">RGU Lecturer</p>
+                        <p class="testimonial_ocupation">Honours project</p>
+                    </div>
+                    <div class="testimonial_container3">
+                        <p class="testimonial_description">“An excellent project that you should be very proud to put in your portfolio… Your presentation skills are really good! You backed your design well with explaining things about the branding and the style of choice… and showcase them extremely well in your final product. ”</p>
+                        <p class="testimonial_name">RGU Lecturer</p>
+                        <p class="testimonial_ocupation">Design principles</p>
+                    </div>
                 </div>
-                <div class="testimonial_container2">
-                    <p class="testimonial_description">“I am very impressed by the developmental work that went into this project and the way that the student took it upon themselves to perform many rounds of iterative improvement. Rather than stopping when the work was ostensibly done, Kaloyan went ahead…<strong>This demo was head and shoulders above any other I have seen at RGU…</strong> He has produced (and presented) work of the highest quality.”</p>
-                    <p class="testimonial_name">RGU Lecturer</p>
-                    <p class="testimonial_ocupation">Honours project</p>
+                <div class="contact">
+                    <p class="contact_txt">Get in touch with me</p>
+                    <a href="contact.html">
+                        <button class="contact_btn">Contact me</button>
+                    </a>
                 </div>
-                <div class="testimonial_container3">
-                    <p class="testimonial_description">“An excellent project that you should be very proud to put in your portfolio… Your presentation skills are really good! You backed your design well with explaining things about the branding and the style of choice… and showcase them extremely well in your final product. ”</p>
-                    <p class="testimonial_name">RGU Lecturer</p>
-                    <p class="testimonial_ocupation">Design principles</p>
-                </div>
-            </div>
-            <div class="contact">
-                <p class="contact_txt">Get in touch with me</p>
-                <a href="#">
-                    <button class="contact_btn">Contact me</button>
-                </a>
             </div>
             <div class="footer">
                 <p><a href="#" class="footer_link">LinkedIn</a></p>
@@ -140,7 +147,6 @@
                 <p><a href="#" class="footer_link">Email</a></p>
                 <p class="rights">© 2025 Kaloyan Asenov. All Rights Reserved.</p>
             </div>
-
         </div>
     </main>
     

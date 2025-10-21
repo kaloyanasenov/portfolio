@@ -31,21 +31,24 @@ header, nav {
     
 }
 .dark_bg {
-    height: 250vh;
+    min-height: 250vh;
     background-color: var(--black_clr_backgrouond);
     color: var(--white_clr_background);
 }
 
 .light_bg {
-    height: 200vh;
+    min-height: 200vh;
     background-color: var(--white_clr_background);
     color: var(--black_clr_backgrouond);
 }
 
-
+.wrapper {
+    max-width: 70vw;
+    margin-inline: auto;
+}
 
 header {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* nav bar setup */
@@ -87,25 +90,28 @@ nav {
 .welcome {
     display: grid;
     place-content: center;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 10rem;
-    padding-inline: 25rem;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
+    padding-top: 7rem;
+    gap: 5rem;
+    /* padding-inline: 25rem; */
 }
 
 .welcome_img_overflow {
     overflow: hidden;
     padding-top: 4rem;
-    padding-left: 6rem;
+    padding-inline: 6rem;
+    /* padding-left: 6rem; */
+    padding-bottom: 10rem;
+    margin: auto;
 }
 .welcome img {
     height: 290px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    /* padding-left: 6rem; */
-    border: px solid white;
     box-shadow: 0 0 3rem .2rem white;
-    
 }
+
 .greeting h1 {
     
     font-size: 5rem;
@@ -165,10 +171,12 @@ nav {
 /* cards */
 .project_cards {
     display: grid;
-    justify-self: center;
+    justify-content: center;
     gap: 5rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(380px,1fr));
     padding-top: 7.5rem; 
+    /* margin: auto; */
     
 }
 
@@ -254,7 +262,7 @@ nav {
 
 .title_projects {
     padding-top: 10rem;
-    padding-left: 10rem;
+    /* padding-left: 10rem; */
     font-size: 4rem;
 }
 
@@ -328,19 +336,23 @@ nav {
 
 /* Testimonials */
 .testimonials {
-    height: 80vh;
+    /* height: 80vh; */
     color: var(--white_clr_background);
     display: grid;
     justify-self: center;
     gap: 5rem;
-    grid-template-columns: repeat(3,350px);
+    /* grid-template-columns: repeat(3,350px); */
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     border-radius: 1rem;
+    /* margin-top: 7.5rem;
+    margin-bottom: 15rem; */
    
 }
 
 .testimonials_title {
     padding-top: 10rem;
-    padding-left: 10rem;
+    padding-bottom: 10rem;
+    /* padding-left: 10rem; */
     font-size: 4rem;
 
 }
@@ -348,8 +360,7 @@ nav {
 .testimonial_container1, .testimonial_container2, .testimonial_container3 {
     box-shadow: 0 0 1rem 1rem #2b2b2b;
     background-color: #3f3f3f;
-    margin-top: 7.5rem;
-    margin-bottom: 15rem;
+    
     border-radius: 1rem;
     padding: 2rem;
     display: grid;
@@ -373,6 +384,7 @@ nav {
 
 .contact_txt {
     padding-top: 20rem;
+    text-align: center;
     font-size: 4rem;
 }
 
@@ -421,7 +433,7 @@ nav {
 /* ICP page styling */
 
 .project_header {
-    height: 20vh;
+    min-height: 20vh;
     background-color: var(--black_clr_backgrouond);
 }
 
@@ -434,10 +446,14 @@ nav {
 
 }
 
+.icp_background {
+    background-color: var(--white_clr_background);
+    padding-block: 3rem;
+}
 .project_description {
     font-size: 1.5rem;
-    margin-inline: 15rem;
-    margin-block: 5rem;
+    /* margin-inline: 15rem; */
+    padding-block: 2rem;
 }
 
 .pdf_obj {
@@ -449,9 +465,9 @@ nav {
 
 .project_grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-template-areas:
-    "content image";
+    "content content image";
     gap: 2.5rem;
     /* justify-self: center; */
     padding-block: 10rem;
@@ -461,77 +477,55 @@ nav {
     grid-area: content;
     word-wrap: break-word;
   word-break: break-all;
-  margin-left: 15rem;
+  /* margin-left: 15rem; */
     /* margin-left: 10rem; */
 }
 
 .project_image {
     grid-area: image;
+    justify-self: end;
 }
 
-@media only screen and (max-width: 768px) {
 
-    .project_header {
-    height: 30vh;
-    background-color: var(--black_clr_backgrouond);
-}
 
-.project_title {
-    font-size: 3rem;
-    color: var(--white_clr_background);
+/* volleyball manual */
+.video_grid {
     display: grid;
-    text-align: center;
-    padding-top: 4rem;
-
+    justify-content: center;
 }
 
-.project_description {
-    font-size: 1.5rem;
-    margin-inline: 5rem;
-    margin-block: 5rem;
+.video_size {
+    aspect-ratio: 16 / 9;
+    width: 60vw;
 }
 
-.pdf_obj {
-    width: 80%;
-    aspect-ratio: 4 / 3;
+.volleyball_grid {
     display: grid;
-    justify-self: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-block: 2rem;
 }
 
-.project_grid {
+.volleyball_grid img {
+    margin-inline: auto ;
+}
+
+/* GD page */
+.gd_grid {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "content "
-    "image";
-    gap: 2.5rem;
-    /* justify-self: center; */
-    /* padding-block: 10rem; */
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.project_info {
-    grid-area: content;
-    align-self:center;
-    word-wrap: break-word;
-  word-break: break-all;
-  margin-inline: 5rem;
-
+figcaption {
+    font-size: .8rem;
+    color:#707070;
 }
-
-.project_image {
-    grid-area: image;
-    /* margin-inline: 3rem; */
-    justify-self: center;
-}
-}
-
-
-
 
 /* About page */
-
 .about_header {
-    height: 70vh;
+    min-height: 70vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: 
@@ -601,7 +595,7 @@ nav {
 }
 
 .about_footer {
-    height: 40vh;
+    min-height: 40vh;
     background-color: var(--black_clr_backgrouond);
     color: var(--white_clr_background);
 }
@@ -610,7 +604,7 @@ nav {
 
 /* projects page  */
 .projects_header {
-    height: 30vh;
+    min-height: 30vh;
     background-color: var(--black_clr_backgrouond);
     color: var(--white_clr_background);
 }
@@ -631,11 +625,176 @@ nav {
 
 /* contats page */
 .contacts_header {
-    height: 80vh;
+    min-height: 80vh;
     background-color: var(--black_clr_backgrouond);
 }
 
 .contacts_title {
     font-size: 2rem;
     color: var(--white_clr_background);
+}
+
+/* tablet view */
+@media only screen and (max-width: 1024px) {
+
+    .project_header {
+    min-height: 30vh;
+    background-color: var(--black_clr_backgrouond);
+}
+
+.welcome {
+    display: grid;
+    place-content: center;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
+    padding-top: 7rem;
+    gap: 2rem;
+    /* padding-inline: 25rem; */
+}
+
+.welcome_img_overflow {
+    overflow: hidden;
+    padding-top: 4rem;
+    padding-inline: 6rem;
+    /* padding-left: 6rem; */
+    padding-bottom: 7rem;
+    margin: auto;
+}
+.welcome img {
+    height: 290px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0 0 3rem .2rem white;
+}
+
+.down {
+    display: grid;
+    place-content: center;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.project_title {
+    font-size: 3rem;
+    color: var(--white_clr_background);
+    display: grid;
+    text-align: center;
+    padding-top: 4rem;
+
+}
+
+.project_description {
+    font-size: 1.5rem;
+    /* margin-inline: 5rem; */
+    margin-block: 5rem;
+}
+
+.pdf_obj {
+    width: 80%;
+    aspect-ratio: 4 / 3;
+    display: grid;
+    justify-self: center;
+}
+
+.project_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-areas:
+    "content"
+    "image";
+    gap: 2.5rem;
+    /* justify-self: center; */
+    /* padding-block: 10rem; */
+}
+
+.project_info {
+    grid-area: content;
+    align-self:center;
+    /* word-wrap: break-word;
+  word-break: break-all; */
+  /* margin-inline: 5rem; */
+
+}
+
+.project_image {
+    grid-area: image;
+    /* margin-inline: 3rem; */
+    justify-self: center;
+}
+}
+
+@media only screen and (max-width: 1300px) {
+.project_cards {
+    
+    justify-self: center;
+}
+}
+
+
+/* phone view */
+@media (max-width: 600px) {
+
+    .welcome {
+    display: grid;
+    place-content: center;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    padding-top: 3rem;
+    gap: 2rem;
+    /* padding-inline: 25rem; */
+}
+
+.welcome_img_overflow {
+    overflow: hidden;
+    padding-top: 4rem;
+    padding-inline: 6rem;
+    /* padding-left: 6rem; */
+    padding-bottom: 5rem;
+    margin: auto;
+}
+.welcome img {
+    height: 90px;
+    width: 90px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0 0 3rem .2rem white;
+    
+    
+}
+.greeting h1 {
+    
+    font-size: 3rem;
+    font-weight: 500;
+    padding-bottom: 3rem;
+    padding-inline: 2rem;
+}
+.greeting p {
+    padding-left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.greeting button {
+    min-width: 12rem;
+    margin-top: 3rem;
+    padding-block: 1.5em;
+    padding-inline: 1.75em;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--cta_clr);
+    font-size: 1rem;
+    border-radius: 2em;
+    color: var(--white_clr_background);
+    margin-inline: 6.5rem;
+}
+
+.down {
+    display: grid;
+    place-content: center;
+    margin-top: 3rem;
+    text-align: center;
+}
+
 }
