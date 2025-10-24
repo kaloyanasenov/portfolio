@@ -163,7 +163,7 @@ nav svg {
 
         justify-content: flex-start;
         width: 100%;
-        height: 50vh;
+        height: 60vh;
     }
 
     nav a {
@@ -179,7 +179,7 @@ nav svg {
     }
 
     .open-sidebar-btn {
-        margin-left: 60%;
+        margin-left: 55%;
     }
 
     #sidebar-active:checked ~ .links-container {
@@ -190,6 +190,17 @@ nav svg {
         align-items: center;
         margin-right: auto;
         padding-left: 5rem;
+}
+
+/* GD */
+.gd_grid img, video, figure {
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+}
+
+.gd_grid figcaption {
+    width: 300px;
 }
 }
 /* header */
@@ -399,7 +410,7 @@ nav svg {
 
 /* Skills */
 
-.skills {
+/* .skills {
     display: grid;
     grid-template-columns: repeat(3, 250px);
     grid-template-areas: 
@@ -436,10 +447,83 @@ nav svg {
     color: var(--white_clr_background);
     padding: 5rem;
     border-radius: 1rem;
+} */
+.skills {
+    display: grid;
+    /* 1. Default to a single, fluid column for all screens */
+    grid-template-columns: 1fr; 
+    
+    /* 2. Define the stacking order for mobile */
+    grid-template-areas: 
+        "skill1"
+        "container1"
+        "container2";
+        
+    gap: 2rem; /* Reduced gap for mobile */
+    padding-block: 4rem; /* Reduced padding for mobile */
+    
+    /* Ensure the grid items stretch horizontally */
+    justify-content: stretch;
+    justify-self: stretch;
+    padding-inline: 1rem;
 }
 
+.skills_p1, .skills_p2 {
+    grid-area: skill1; /* Only needs to target one skill area for mobile */
+    align-self: center;
+    justify-self: center;
+    font-size: 1.8rem; /* Adjusted font size for mobile */
+    text-align: center;
+    padding: 1rem 0; /* Add a little spacing */
+}
 
+.skills_container1 {
+    grid-area: container1;
+    /* Ensure containers fill the width */
+    width: auto; 
+    padding: 2.5rem; /* Reduced padding for mobile */
+    border-radius: 1rem;
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+}
+.skills_container2 {
+    grid-area: container2;
+    /* Ensure containers fill the width */
+    width: auto; 
+    padding: 2.5rem; /* Reduced padding for mobile */
+    border-radius: 1rem;
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+}
 
+/* --- DESKTOP OVERRIDE (Applies only to screens >= 801px) --- */
+@media (min-width: 801px) {
+    .skills {
+        /* Reapply the fixed 3-column structure */
+        grid-template-columns: repeat(3, 250px);
+        grid-template-areas: 
+            "skill1 container1 container1"
+            "container2 container2 skill2";
+        
+        /* Restore desktop padding/gap */
+        gap: 2.5rem;
+        padding-block: 10rem;
+        
+        /* Restore desktop alignment */
+        justify-self: center;
+    }
+    
+    .skills_p1, .skills_p2 {
+        font-size: 2rem;
+        justify-self: center;
+        /* Reset padding added for mobile */
+        padding: 0; 
+    }
+    
+    .skills_container1, .skills_container2 {
+        padding: 5rem;
+    }
+}
 
 /* Testimonials */
 .testimonials {
@@ -540,7 +624,7 @@ nav svg {
 /* ICP page styling */
 
 .project_header {
-    min-height: 20vh;
+    min-height: 30vh;
     background-color: var(--black_clr_backgrouond);
 }
 
@@ -630,13 +714,20 @@ figcaption {
     color:#707070;
 }
 
+
+/* volleyball */
+
+.volleyball_grid img {
+    height: 100%;
+    width: 80%;
+}
 /* About page */
 .about_header {
     min-height: 70vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: 
-    "picture text";
+    /* grid-template-areas: 
+    "picture text"; */
     align-content: center;
     /* align-items: center; */
     background-color: var(--black_clr_backgrouond);
@@ -646,12 +737,12 @@ figcaption {
 }
 
 .about_profile_pic {
-    grid-area: picture;
+    /* grid-area: picture; */
     margin-left: 20rem;
 }
 
 .about_header_text {
-    grid-area: text;
+    /* grid-area: text; */
     margin-right: 20rem;
     line-height: 1.5;
 }
@@ -667,7 +758,7 @@ figcaption {
 }
 
 .about_main {
-    margin-top: 5rem;
+    padding-block: 5rem;
     background-color: var(--white_clr_background);
 }
 
@@ -680,12 +771,14 @@ figcaption {
 .about_certificates {
     display: grid;
     margin-inline: 20rem;
-    margin-bottom: 10rem;
-    grid-template-areas: 
-    "award1 award2 award3 award4";
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-areas: 
+    "award1 award2 award3"; */
 }
 
-.award1 {
+/* .award1 {
     grid-area: award1;
 }
 
@@ -699,7 +792,7 @@ figcaption {
 
 .award4 {
     grid-area: award4;
-}
+} */
 
 .about_footer {
     min-height: 40vh;
@@ -791,18 +884,18 @@ figcaption {
 }
 
 .project_title {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--white_clr_background);
     display: grid;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 8rem;
 
 }
 
 .project_description {
-    font-size: 1.5rem;
+    font-size: 1rem;
     /* margin-inline: 5rem; */
-    margin-block: 5rem;
+    margin-bottom: 2rem;
 }
 
 .pdf_obj {
@@ -820,7 +913,7 @@ figcaption {
     "image";
     gap: 2.5rem;
     /* justify-self: center; */
-    /* padding-block: 10rem; */
+    padding-block: 5rem;
 }
 
 .project_info {
@@ -836,6 +929,97 @@ figcaption {
     grid-area: image;
     /* margin-inline: 3rem; */
     justify-self: center;
+}
+
+/* projects page */
+.projects_header p {
+    padding-top: 10rem;
+    padding-left: 10rem;
+}
+.header_title_projects {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--white_clr_background);
+}
+
+.projects_cards_grid > .project_cards > .card {
+    margin-bottom: 5rem;
+}
+
+.contacts_title {
+    font-size: 1.5rem;
+    color: var(--white_clr_background);
+    text-align: center;
+}
+
+/* about */
+.about_header {
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-areas: 
+    "picture text"; */
+    align-content: center;
+    /* align-items: center; */
+    background-color: var(--black_clr_backgrouond);
+    color: var(--white_clr_background);
+    gap: 5rem;
+    
+}
+
+.about_profile_pic {
+    /* grid-area: picture; */
+    /* text-align: center; */
+    /* margin-left: 7rem; */
+    padding-top: 7rem;
+    margin:auto;
+    height:290px;
+    width: 231.6px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.about_header_text {
+    /* grid-area: text; */
+    margin: auto;
+    margin-inline: 5rem;
+    line-height: 1.5;
+}
+
+.about_header_greeting {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.about_header_description {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about_main {
+    padding-block: 5rem;
+    background-color: var(--white_clr_background);
+}
+
+.about_main_title {
+    font-size: 1.25rem;
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+}
+
+.about_certificates {
+    display: grid;
+    /* margin-inline: 10rem; */
+    margin: auto;
+    padding-inline: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    font-size: .75rem;
+    /* grid-template-areas: 
+    "award1 award2 award3"; */
 }
 }
 

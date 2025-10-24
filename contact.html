@@ -17,13 +17,27 @@
         <div class="logo">
             <p><em>kaloyan.assenov</em></p>
         </div>
-        <ul class="nav_btn">
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
+        </label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg>
+            </label>
+        <!-- <ul class="nav_btn">
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="#">Motorsports</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contacts</a></li>
-        </ul>
+        </ul> -->
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="#">Motorsports</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contacts</a>
+        </div>
     </nav>
     <div class="contacts_header">
         <div class="wrapper">
@@ -32,13 +46,51 @@
         
     </div>
 
-    <div class="about_footer">
-        <div class="footer">
-            <p><a href="https://www.linkedin.com/in/kaloyan-asenov " class="footer_link">LinkedIn</a></p>
-            <p><a href="https://www.instagram.com/kaloyan_assenov2.0?igsh=MWJ0Mjd4NXUzZ3dwZQ%3D%3D&utm_source=qr" class="footer_link">Instagram</a></p>
-            <p><a href="#" class="footer_link">Email</a></p>
-            <p class="rights">© 2025 Kaloyan Asenov. All Rights Reserved.</p>
+    <div class="about_footer">   
+            <div class="footer">
+                <p><a href="https://www.linkedin.com/in/kaloyan-asenov " class="footer_link">LinkedIn</a></p>
+                <p><a href="https://www.instagram.com/kaloyan_assenov2.0?igsh=MWJ0Mjd4NXUzZ3dwZQ%3D%3D&utm_source=qr" class="footer_link">Instagram</a></p>
+                <p><a href="javascript:void(0)" onclick="copyEmailToClipboard('kaloyan.assenov@gmail.com')" class="footer_link">Email (Click to Copy)</a></p>
+                <p class="rights">© 2025 Kaloyan Asenov. All Rights Reserved.</p>
+            </div>
         </div>
-    </div>
 </body>
+<!-- generated -->
+    <script>
+    function copyEmailToClipboard(email) {
+        // 1. Create a temporary input element
+        const tempInput = document.createElement('input');
+        
+        // 2. Set the input's value to the email address
+        tempInput.value = email;
+        
+        // 3. Add the input element to the document (it must be in the DOM to be selected)
+        document.body.appendChild(tempInput);
+        
+        // 4. Select the text in the input field
+        tempInput.select();
+        
+        // 5. Execute the copy command
+        // document.execCommand('copy') is older, but widely supported
+        // navigator.clipboard.writeText is newer and better, so we'll try it first
+        
+        if (navigator.clipboard && window.isSecureContext) {
+            // New, preferred method for secure contexts (HTTPS)
+            navigator.clipboard.writeText(email)
+                .then(() => {
+                    alert('Email address copied to clipboard: ' + email);
+                })
+                .catch(err => {
+                    console.error('Could not copy text: ', err);
+                });
+        } else {
+            // Fallback for older browsers or non-secure contexts (HTTP)
+            document.execCommand('copy');
+            alert('Email address copied to clipboard: ' + email);
+        }
+        
+        // 6. Remove the temporary input element
+        document.body.removeChild(tempInput);
+    }
+</script>
 </html>
