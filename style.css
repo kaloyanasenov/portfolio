@@ -843,6 +843,61 @@ figcaption {
     color: var(--white_clr_background);
 }
 
+
+
+/* motorsports page */
+.motorsports_background {
+    background-color: var(--black_clr_backgrouond);
+    min-height: 50vh;
+}
+.motorsports_background img {
+    /* display: flex;
+  justify-content: center; */
+  margin: auto;
+  max-width:100%;
+  width: 100vw;
+}
+
+.motorsports_quote {
+    padding-block: 2rem;
+    font-weight: 200;
+    text-align: center;
+    color: var(--white_clr_background);
+}
+.motorsports_img_description{
+    color: var(--gray-clr);
+    margin-inline: 3rem;
+}
+
+.motorsport_project_title {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: var(--white_clr_background);
+}
+
+.motorsport_project_description{
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: var(--white_clr_background);
+    line-height: 1.5;
+}
+
+.F1_stats_grid {
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+.stats_description p {
+    padding-block: 3rem;
+    color: var(--white_clr_background);
+    line-height: 1.5;
+}
+.f1stat_link{   
+    color: var(--white_clr_background);
+}
+
 /* tablet view */
 @media only screen and (max-width: 1024px) {
 
@@ -882,7 +937,27 @@ figcaption {
     margin-top: 5rem;
     text-align: center;
 }
+.title_projects {
+    padding-top: 10rem;
+    /* padding-left: 10rem; */
+    font-size: 2.5rem;
+    text-align: center;
+}
 
+.testimonials_title {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    /* padding-left: 10rem; */
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.contact_txt {
+    padding-top: 20rem;
+    text-align: center;
+    font-size: 2.5rem;
+    text-align: center;
+}
 .project_title {
     font-size: 2rem;
     color: var(--white_clr_background);
@@ -1020,6 +1095,12 @@ figcaption {
     font-size: .75rem;
     /* grid-template-areas: 
     "award1 award2 award3"; */
+}
+
+.F1_stats_grid {
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 }
 
