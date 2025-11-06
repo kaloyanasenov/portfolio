@@ -539,7 +539,9 @@ nav svg {
 
 
     display: grid;
-    justify-self: center;
+    /* justify-self: center; */
+    justify-items: center;
+    margin: 0 auto;
     gap: 5rem;
     /* grid-template-columns: repeat(3,350px); */
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
