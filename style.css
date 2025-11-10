@@ -1230,3 +1230,13 @@ figcaption {
     height: auto;
   }
 }
+@media (max-width: 400px) {
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .project-card {
+    width: 260px;
+  }
+}
