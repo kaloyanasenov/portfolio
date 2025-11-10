@@ -302,12 +302,16 @@ nav svg {
 /* cards */
 .project_cards {
     display: grid;
-    justify-content: center;
-    gap: 5rem;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-columns: repeat(auto-fit, minmax(380px,1fr));
-    padding-top: 7.5rem; 
-    /* margin: auto; */
+  grid-template-columns: repeat(auto-fit, minmax(380px, max-content));
+  gap: 5rem;
+  justify-content: center;
+  padding-top: 7.5rem;
+  padding-inline: 1rem; /* keeps safe spacing on mobile */
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
     
 }
 
