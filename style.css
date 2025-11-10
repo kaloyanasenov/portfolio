@@ -544,32 +544,28 @@ nav svg {
 }
 
 /* Testimonials */
+
 .testimonials {
-    /* height: 80vh; */
-    color: var(--white_clr_background);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 5rem;
 
-    align-items: stretch;/* firefoxgpt fix */
+  /* centering */
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 1rem;
 
+  /* ensures cards align and stretch evenly */
+  justify-content: center;   /* fixes Safari misalignment */
+  align-items: stretch;
 
-    display: grid;
-    /* justify-self: center; */
-    justify-items: center;
-    margin: 0 auto;
-    gap: 5rem;
-    /* grid-template-columns: repeat(3,350px); */
-    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
-    border-radius: 1rem;
-    /* margin-top: 7.5rem;
-    margin-bottom: 15rem; */
-
-    width: 100%;
-max-width: 1200px; /* or whatever fits your design */
-margin: 0 auto;
-justify-items: center;
-align-items: start;
-padding-inline: 1rem;
-   
+  /* visuals */
+  color: var(--white_clr_background);
+  border-radius: 1rem;
+  box-sizing: border-box;
 }
+
 
 .testimonials_title {
     padding-top: 10rem;
