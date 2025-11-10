@@ -1215,15 +1215,6 @@ figcaption {
 
 }
 
-.card_img {
-  display: block;
-  width: 100%;      /* fill the card’s width */
-  height: auto;     /* maintain aspect ratio */
-  border-radius: 1rem;
-  object-fit: cover; /* ensures consistent cropping if needed */
-    aspect-ratio: 16 / 10; /* or whatever fits your image shape */
-}
-
 /* Shrink slightly and add side space on phones */
 @media (max-width: 600px) {
   .project_cards {
