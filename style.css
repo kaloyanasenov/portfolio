@@ -1,3 +1,16 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%; /* prevent Safari zooming text */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* above is a chat-gpt suggestion to fix ios layout */
 * {
     padding: 0;
     margin: 0;
