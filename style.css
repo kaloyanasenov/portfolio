@@ -1214,3 +1214,19 @@ figcaption {
 }
 
 }
+/* Smaller cards on mobile screens */
+@media (max-width: 600px) {
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+
+  .project-card {
+    width: 300px;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: auto;
+  }
+}
