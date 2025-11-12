@@ -944,7 +944,23 @@ figcaption {
 .f1stat_link{   
     color: var(--white_clr_background);
 }
-
+@media only screen and (max-width: 1500px) {
+.project_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-areas:
+    "content"
+    "image";
+    gap: 2.5rem;
+    justify-self: center;
+    padding-block: 5rem;
+}
+.project_image {
+    grid-area: image;
+    /* margin-inline: 3rem; */
+    justify-self: center;
+}
+}
 /* tablet view */
 @media only screen and (max-width: 1024px) {
 
@@ -1030,16 +1046,7 @@ figcaption {
     justify-self: center;
 }
 
-.project_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-areas:
-    "content"
-    "image";
-    gap: 2.5rem;
-    /* justify-self: center; */
-    padding-block: 5rem;
-}
+
 
 .project_info {
     grid-area: content;
@@ -1050,11 +1057,7 @@ figcaption {
 
 }
 
-.project_image {
-    grid-area: image;
-    /* margin-inline: 3rem; */
-    justify-self: center;
-}
+
 
 /* projects page */
 .projects_header p {
@@ -1231,14 +1234,18 @@ figcaption {
 }
 .housing_img {
     display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* centers it */
 }
 .ref_hero {
     padding-bottom: 3rem;
+    width: 100%;
 }
 .figma_link {
     display: flex;
     justify-content: end;
-    padding-inline: 10rem;
+    padding-inline: 3rem;
 }
 .last_p {
     padding-bottom: 3rem;
