@@ -34,7 +34,14 @@ body {
     --white_clr_background: #fafafa;
     --cta_clr: #2D64F1;
     --cta_clr_light: #799aee;
-    /* --fw */
+    /* --font-size */
+    --main_header_fs: 5rem;
+    --page_title_fs: 4rem;
+    --header-fs: 2.5rem;
+    --section_title_fs: 1.5rem;
+    --button_txt_fs: 1.25rem;
+    --body_text_fs: 1rem;
+    --details_fs: 0.75rem;
 
 }
 
@@ -245,13 +252,13 @@ nav svg {
 
 .greeting h1 {
     
-    font-size: 5rem;
+    font-size: var(--main_header_fs);
     font-weight: 500;
     padding-bottom: 5rem;
 }
 .greeting p {
     padding-left: 1.5rem;
-    font-size: 1.5rem;
+    font-size: var(--section_title_fs);
     font-weight: 500;
     line-height: 1.5;
 }
@@ -264,7 +271,7 @@ nav svg {
     cursor: pointer;
     text-align: center;
     background-color: var(--cta_clr);
-    font-size: 1.2rem;
+    font-size: var(--button_txt_fs);
     border-radius: 2em;
     color: var(--white_clr_background);
 }
@@ -369,7 +376,7 @@ nav svg {
 }
 .card_container h3 {
     
-    font-size: 1.4rem;
+    font-size: var(--body_text_fs);
     
 }
 
@@ -379,7 +386,7 @@ nav svg {
     padding: .5rem;
     border-radius: .65rem;
     margin: .5rem;
-    font-size: .75rem;
+    font-size: var(--details_fs);
     /* color: var(--black_clr_backgrouond); */
 }
 .info_overlay p {
@@ -390,7 +397,7 @@ nav svg {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-    font-size: 1rem;
+    font-size: var(--body_text_fs);
     text-decoration: none;
     color: var(--white_clr_background);
 }
@@ -398,7 +405,7 @@ nav svg {
 .title_projects {
     padding-top: 10rem;
     /* padding-left: 10rem; */
-    font-size: 4rem;
+    font-size: var(--page_title_fs);
 }
 
 .more_prj_btn {
@@ -414,7 +421,7 @@ nav svg {
     cursor: pointer;
     text-align: center;
     background-color: var(--cta_clr);
-    font-size: 1.2rem;
+    font-size: var(--button_txt_fs);
     border-radius: 2em;
     color: var(--white_clr_background);
 }
@@ -494,7 +501,7 @@ nav svg {
     grid-area: skill1; /* Only needs to target one skill area for mobile */
     align-self: center;
     justify-self: center;
-    font-size: 1.8rem; /* Adjusted font size for mobile */
+    font-size: var(--section_title_fs); /* Adjusted font size for mobile */
     text-align: center;
     padding: 1rem 0; /* Add a little spacing */
 }
@@ -519,7 +526,7 @@ nav svg {
 }
 
 /* --- DESKTOP OVERRIDE (Applies only to screens >= 801px) --- */
-@media (min-width: 801px) {
+@media (min-width: 901px) {
     .skills {
         /* Reapply the fixed 3-column structure */
         grid-template-columns: repeat(3, 250px);
@@ -530,13 +537,14 @@ nav svg {
         /* Restore desktop padding/gap */
         gap: 2.5rem;
         padding-block: 10rem;
+        padding-inline: 5rem;
         
         /* Restore desktop alignment */
         justify-self: center;
     }
     
     .skills_p1, .skills_p2 {
-        font-size: 2rem;
+        font-size: var(--section_title_fs);
         justify-self: center;
         /* Reset padding added for mobile */
         padding: 0; 
@@ -575,7 +583,7 @@ nav svg {
     padding-top: 10rem;
     padding-bottom: 10rem;
     /* padding-left: 10rem; */
-    font-size: 4rem;
+    font-size: var(--page_title_fs);
 
 }
 
@@ -607,7 +615,7 @@ nav svg {
 .contact_txt {
     padding-top: 20rem;
     text-align: center;
-    font-size: 4rem;
+    font-size: var(--page_title_fs);
 }
 
 .contact_btn {
@@ -617,7 +625,7 @@ nav svg {
     cursor: pointer;
     text-align: center;
     background-color: var(--cta_clr);
-    font-size: 1.2rem;
+    font-size: var(--button_txt_fs);
     border-radius: 2em;
     color: var(--white_clr_background);
     margin-top: 5rem;
@@ -638,7 +646,7 @@ nav svg {
     margin-left: 5rem;
     line-height: 2;
     color: var(--white_clr_background);
-    font-size: 1.5rem;
+    font-size: var(--section_title_fs);
 }
 
 .rights {
@@ -660,7 +668,7 @@ nav svg {
 }
 
 .project_title {
-    font-size: 4rem;
+    font-size: var(--page_title_fs);
     color: var(--white_clr_background);
     display: grid;
     text-align: center;
@@ -673,7 +681,7 @@ nav svg {
     padding-block: 3rem;
 }
 .project_description {
-    font-size: 1.5rem;
+    font-size: var(--section_title_fs);
     /* margin-inline: 15rem; */
     padding-block: 2rem;
 }
@@ -742,7 +750,7 @@ nav svg {
 }
 
 figcaption {
-    font-size: .8rem;
+    font-size: var(--details_fs);
     color:#707070;
 }
 
@@ -770,6 +778,11 @@ figcaption {
 
 .about_profile_pic {
     /* grid-area: picture; */
+    display: block;
+  width: auto;
+  height: auto;
+    max-height: 363px;
+    max-width: 290px;
     margin-left: 20rem;
 }
 
@@ -780,13 +793,14 @@ figcaption {
 }
 
 .about_header_greeting {
-    font-size: 2.5rem;
+    font-size: var(--header-fs);
     font-weight: 500;
 }
 
 .about_header_description {
     margin-top: 5rem;
-    font-size: 1.5rem;
+    font-size: var(--section_title_fs);
+    text-align: justify;
 }
 
 .about_main {
@@ -795,7 +809,7 @@ figcaption {
 }
 
 .about_main_title {
-    font-size: 1.5rem;
+    font-size: var(--section_title_fs);
     margin-left: 20rem;
     margin-bottom: 5rem;
 }
@@ -846,7 +860,7 @@ figcaption {
     padding-left: 20rem;
 }
 .header_title_projects {
-    font-size: 2.5rem;
+    font-size: var(--page_title_fs);
     font-weight: 500;
     color: var(--white_clr_background);
 }
@@ -871,7 +885,7 @@ figcaption {
 }
 
 .contacts_title {
-    font-size: 2rem;
+    font-size: var(--header-fs);
     color: var(--white_clr_background);
 }
 
@@ -899,17 +913,18 @@ figcaption {
 .motorsports_img_description{
     color: var(--gray-clr);
     margin-inline: 3rem;
+    font-size: var(--details_fs);
 }
 
 .motorsport_project_title {
     margin-top: 5rem;
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: var(--section_title_fs);
     color: var(--white_clr_background);
 }
 
 .motorsport_project_description{
-    font-size: 1rem;
+    font-size: var(--body_text_fs);
     margin-top: 2rem;
     color: var(--white_clr_background);
     line-height: 1.5;
@@ -972,15 +987,15 @@ figcaption {
 .title_projects {
     padding-top: 10rem;
     /* padding-left: 10rem; */
-    font-size: 2.5rem;
+    font-size: var(--header-fs);
     text-align: center;
 }
 
 .testimonials_title {
     padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
     /* padding-left: 10rem; */
-    font-size: 2.5rem;
+    font-size: var(--header-fs);
     text-align: center;
 }
 .testimonial_container1, .testimonial_container2, .testimonial_container3 {
@@ -990,11 +1005,11 @@ figcaption {
 .contact_txt {
     padding-top: 20rem;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: var(--header-fs);
     text-align: center;
 }
 .project_title {
-    font-size: 2rem;
+    font-size: var(--section_title_fs);
     color: var(--white_clr_background);
     display: grid;
     text-align: center;
@@ -1003,7 +1018,7 @@ figcaption {
 }
 
 .project_description {
-    font-size: 1rem;
+    font-size: var(--body_text_fs);
     /* margin-inline: 5rem; */
     margin-bottom: 2rem;
 }
@@ -1047,7 +1062,7 @@ figcaption {
     padding-left: 10rem;
 }
 .header_title_projects {
-    font-size: 2rem;
+    font-size: var(--section_title_fs);
     font-weight: 500;
     color: var(--white_clr_background);
 }
@@ -1057,7 +1072,7 @@ figcaption {
 }
 
 .contacts_title {
-    font-size: 1.5rem;
+    font-size: var(--header-fs);
     color: var(--white_clr_background);
     text-align: center;
 }
@@ -1083,8 +1098,6 @@ figcaption {
     /* margin-left: 7rem; */
     padding-top: 7rem;
     margin:auto;
-    height:290px;
-    width: 231.6px;
     /* display: flex;
     justify-content: center; */
 }
@@ -1097,14 +1110,15 @@ figcaption {
 }
 
 .about_header_greeting {
-    font-size: 2.5rem;
+    font-size: var(--section_title_fs);
     font-weight: 500;
 }
 
 .about_header_description {
     margin-top: 5rem;
-    font-size: 1.5rem;
+    font-size: var(--body_text_fs);
     margin-bottom: 2rem;
+   
 }
 
 .about_main {
@@ -1113,7 +1127,7 @@ figcaption {
 }
 
 .about_main_title {
-    font-size: 1.25rem;
+    font-size: var(--section_title_fs);
     margin-left: 2rem;
     margin-bottom: 5rem;
 }
@@ -1125,9 +1139,10 @@ figcaption {
     padding-inline: 3rem;
     align-items: center;
     justify-content: space-between;
-    grid-template-columns: repeat(3,1fr);
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     gap: 3rem;
-    font-size: .75rem;
+    font-size: var(--details_fs);
     /* grid-template-areas: 
     "award1 award2 award3"; */
 }
@@ -1179,14 +1194,14 @@ figcaption {
 }
 .greeting h1 {
     
-    font-size: 3rem;
+    font-size: var(--page_title_fs);
     font-weight: 500;
     padding-bottom: 3rem;
     padding-inline: 2rem;
 }
 .greeting p {
     padding-left: 2rem;
-    font-size: 1rem;
+    font-size: var(--body_text_fs);
     font-weight: 500;
     line-height: 1.5;
 }
@@ -1200,7 +1215,7 @@ figcaption {
     cursor: pointer;
     text-align: center;
     background-color: var(--cta_clr);
-    font-size: 1rem;
+    font-size: var(--body_text_fs);
     border-radius: 2em;
     color: var(--white_clr_background);
     margin-inline: 6.5rem;
@@ -1213,4 +1228,18 @@ figcaption {
     text-align: center;
 }
 
+}
+.housing_img {
+    display: block;
+}
+.ref_hero {
+    padding-bottom: 3rem;
+}
+.figma_link {
+    display: flex;
+    justify-content: end;
+    padding-inline: 10rem;
+}
+.last_p {
+    padding-bottom: 3rem;
 }
