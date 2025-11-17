@@ -212,6 +212,8 @@ nav svg {
         padding-left: 5rem;
 }
 
+/* indentation */
+
 /* GD */
 .gd_grid img, video, figure {
     height: 300px;
@@ -297,7 +299,13 @@ nav svg {
     text-decoration: underline;
 }
 
+.in {
+    text-indent: 2em;
+}
 
+li {
+    list-style-position: inside;
+}
 /* projects */
 
 /* .main {
@@ -698,16 +706,21 @@ nav svg {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-template-areas:
-    "content content image";
+    "content content image"
+    "content content image1";
     gap: 2.5rem;
     /* justify-self: center; */
     padding-block: 10rem;
+    
 }
+
 
 .project_info {
     grid-area: content;
-    word-wrap: break-word;
-  word-break: break-all;
+    white-space: normal;        /* default — prevents weird wrapping */
+    overflow-wrap: break-word;
+    /* word-wrap: break-word;
+  word-break: break-all; */
   /* margin-left: 15rem; */
     /* margin-left: 10rem; */
 }
@@ -716,8 +729,17 @@ nav svg {
     grid-area: image;
     justify-self: end;
 }
+.project_image1 {
+    grid-area: image1;
+    justify-self: center;
+}
 
-
+.ICP_wide_img {
+    padding-block: 3rem;
+    display: block;
+  margin: auto;
+  width: 50%;
+}
 
 /* volleyball manual */
 .video_grid {
@@ -819,7 +841,7 @@ figcaption {
     margin-inline: 20rem;
     align-items: center;
     justify-content: space-between;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     /* grid-template-areas: 
     "award1 award2 award3"; */
 }
@@ -950,13 +972,19 @@ figcaption {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-areas:
     "content"
-    "image";
+    "image"
+    "image1";
     gap: 2.5rem;
     justify-self: center;
     padding-block: 5rem;
 }
 .project_image {
     grid-area: image;
+    /* margin-inline: 3rem; */
+    justify-self: center;
+}
+.project_image1 {
+    grid-area: image1;
     /* margin-inline: 3rem; */
     justify-self: center;
 }
@@ -1057,7 +1085,12 @@ figcaption {
 
 }
 
-
+.ICP_wide_img {
+    padding-block: 3rem;
+    display: block;
+  margin: auto;
+  width: 100%;
+}
 
 /* projects page */
 .projects_header p {
